@@ -3,11 +3,15 @@
     "description": "Laravel Zawgyi Unicode",
     "license": "MIT",
     "keywords": [
+        "laravel",
         "converter",
         "zawgyi",
         "unicode",
         "myanmar-font"
     ],
+    "require": {
+        "php": ">=5.6.4"
+    },
     "type": "library",
     "authors": [
         {
