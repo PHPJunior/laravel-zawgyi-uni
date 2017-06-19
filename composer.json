@@ -1,0 +1,17 @@
+{
+    "name": "php-junior/zawuni",
+    "description": "Change Zawgyi to Unicode",
+    "type": "library",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Nyi Nyi Lwin",
+            "email": "nyinyilwin1992@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "PhpJunior\\Zawuni\\": "src/"
+        }
+    }
+}
