@@ -1,6 +1,13 @@
 {
     "name": "php-junior/zawuni",
-    "description": "Change Zawgyi to Unicode",
+    "description": "Laravel Zawgyi Unicode",
+    "license": "MIT",
+    "keywords": [
+        "converter",
+        "zawgyi",
+        "unicode",
+        "myanmar-font"
+    ],
     "type": "library",
     "minimum-stability": "dev",
     "authors": [
