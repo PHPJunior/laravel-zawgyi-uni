@@ -9,7 +9,6 @@
         "myanmar-font"
     ],
     "type": "library",
-    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Nyi Nyi Lwin",
