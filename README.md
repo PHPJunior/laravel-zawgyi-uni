@@ -16,11 +16,6 @@ Once installed, in your project's config/app.php file replace the following entr
 PhpJunior\Zawuni\ZawuniServiceProvider::class,
 ```
 
-Add following alias to aliases array in config/app.php
-```php
-'Zawuni' => PhpJunior\Zawuni\Facades\ZawuniFacades::class
-```
-
 And 
 ```php 
 php artisan vendor:publish --provider="PhpJunior\Zawuni\ZawuniServiceProvider"
@@ -50,6 +45,10 @@ Add `{!! Zawuni::includeFiles() !!}` before `<body>`
 
 ```php
 Zawuni::text($string);
+
+    ( or )
+
+zawuni($string);
 ```
 
 ## Credits
