@@ -11,14 +11,17 @@ namespace PhpJunior\Zawuni\Builder;
 class ZawuniBuilder
 {
     private $font;
+    private $class;
 
     /**
      * ZawuniBuilder constructor.
      * @param $font
+     * @param $class
      */
-    public function __construct($font)
+    public function __construct($font , $class = false)
     {
         $this->font = $font;
+        $this->class = $class;
     }
 
     /**
@@ -27,6 +30,38 @@ class ZawuniBuilder
     public function includeFiles()
     {
         $text = '<link rel="stylesheet" href="http://mmwebfonts.comquas.com/fonts/?font='.$this->font.'"><style>.myanmar3 {  font-family:Myanmar3,Yunghkio,"Masterpiece Uni Sans";  }.yunghkio {  font-family:"Masterpiece Uni Sans",Yunghkio,Myanmar3;  }.masterpiece {  font-family:"Masterpiece Uni Sans",Yunghkio,Myanmar3;  }.zawgyi {  font-family:\'Zawgyi-One\';  }.padauk {  font-family:"Masterpiece Uni Sans",padauk,Yunghkio,Myanmar3;  }.monanonta {  font-family:"MON3 Anonta 1";  }.ourunicode {  font-family:"Ours-Unicode";  }.imon {  font-family:"iMon";  }.mymyanmar {  font-family:"MyMyanmar Universal",Myanmar3,Yunghkio,\'Masterpiece Uni Sans\';  }.pyidaungsu {  font-family: "Pyidaungsu";  }</style>';
+
+        if ($this->class){
+            $text .= /** @lang text */
+                '<script type="text/javascript">
+        function codeAddress() {
+            var el = document.getElementsByTagName("input");
+            for (i = 0; i < el.length; i++) {
+                addClass(el[i], \''.$this->font.'\')
+            }
+            
+            var txt = document.getElementsByTagName("textarea");
+            for (i = 0; i < txt.length; i++) {
+                addClass(txt[i], \''.$this->font.'\')
+            }
+        }
+
+        function addClass(el, className) {
+            if (el.classList)
+                el.classList.add(className)
+            else if (!hasClass(el, className)) el.className += " " + className
+        }
+
+        function hasClass(el, className) {
+            if (el.classList)
+                return el.classList.contains(className)
+            else
+                return !!el.className.match(new RegExp(\'(\\s|^)\' + className + \'(\\s|$)\'))
+        }
+        window.onload = codeAddress;
+    </script>';
+        }
+
         return $text;
     }
 

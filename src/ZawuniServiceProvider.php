@@ -34,7 +34,7 @@ class ZawuniServiceProvider extends ServiceProvider
     {
         $this->app->bind('zawuni', function ($app) {
             $config = $app['config'];
-            return new ZawuniBuilder($config->get('zawuni.font'));
+            return new ZawuniBuilder($config->get('zawuni.font') , $config->get('zawuni.define_class'));
         });
     }
 
