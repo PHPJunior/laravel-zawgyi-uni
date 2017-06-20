@@ -12,7 +12,7 @@ return [
    */
 
     // default : zawgyi
-    'font' => 'ourunicode',
+    'font' => 'zawgyi',
 
     // define class name in input , textarea
     'define_class' => false
