@@ -22,6 +22,9 @@
     "autoload": {
         "psr-4": {
             "PhpJunior\\Zawuni\\": "src/"
-        }
+        },
+        "files": [
+            "helper/helpers.php"
+        ]
     }
 }

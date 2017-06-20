@@ -4,6 +4,7 @@ namespace PhpJunior\Zawuni;
 
 use Illuminate\Support\ServiceProvider;
 use PhpJunior\Zawuni\Builder\ZawuniBuilder;
+use PhpJunior\Zawuni\Facades\ZawuniFacades;
 
 class ZawuniServiceProvider extends ServiceProvider
 {
@@ -26,6 +27,7 @@ class ZawuniServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom($this->configPath(), 'zawuni');
         $this->registerBuilder();
+        $this->registerFacade();
     }
 
     private function registerBuilder()
@@ -33,6 +35,14 @@ class ZawuniServiceProvider extends ServiceProvider
         $this->app->bind('zawuni', function ($app) {
             $config = $app['config'];
             return new ZawuniBuilder($config->get('zawuni.font'));
+        });
+    }
+
+    private function registerFacade()
+    {
+        $this->app->booting(function () {
+            $loader = \Illuminate\Foundation\AliasLoader::getInstance();
+            $loader->alias('Zawuni', ZawuniFacades::class);
         });
     }
 
