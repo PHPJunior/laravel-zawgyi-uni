@@ -52,6 +52,11 @@ Add `{!! Zawuni::includeFiles() !!}` before `<body>`
 Zawuni::text($string);
 ```
 
-##Credits
+## Credits
 
-Sine Yar Pine Yar .. Thet sine thu arr lone  
+- [Rabbit Converter](https://github.com/Rabbit-Converter/Rabbit-PHP)
+- [Ko Sann Linn Naing](https://github.com/sanlinnaing/php-myanmar-encoding-checker)
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.  
