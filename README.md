@@ -1,5 +1,6 @@
 # Laravel Zawgyi Unicode
 
+[![StyleCI](https://styleci.io/repos/94813119/shield?branch=master)](https://styleci.io/repos/94813119)
 [![Latest Stable Version](https://poser.pugx.org/php-junior/zawuni/v/stable)](https://packagist.org/packages/php-junior/zawuni)
 [![Total Downloads](https://poser.pugx.org/php-junior/zawuni/downloads)](https://packagist.org/packages/php-junior/zawuni)
 
