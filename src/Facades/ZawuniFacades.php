@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Facade;
  * Created by PhpStorm.
  * User: nyinyilwin
  * Date: 6/20/17
- * Time: 12:37 AM
+ * Time: 12:37 AM.
  */
 class ZawuniFacades extends Facade
 {

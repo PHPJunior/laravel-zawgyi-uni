@@ -15,7 +15,7 @@ class ZawuniServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->publishes([ $this->configPath() => config_path('zawuni.php')]);
+        $this->publishes([$this->configPath() => config_path('zawuni.php')]);
     }
 
     /**
@@ -34,7 +34,8 @@ class ZawuniServiceProvider extends ServiceProvider
     {
         $this->app->bind('zawuni', function ($app) {
             $config = $app['config'];
-            return new ZawuniBuilder($config->get('zawuni.font') , $config->get('zawuni.define_class'));
+
+            return new ZawuniBuilder($config->get('zawuni.font'), $config->get('zawuni.define_class'));
         });
     }
 
@@ -51,6 +52,6 @@ class ZawuniServiceProvider extends ServiceProvider
      */
     protected function configPath()
     {
-        return __DIR__ . '/../config/zawuni.php';
+        return __DIR__.'/../config/zawuni.php';
     }
 }
