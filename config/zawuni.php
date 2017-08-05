@@ -15,5 +15,5 @@ return [
     'font' => 'zawgyi',
 
     // define class name in input , textarea
-    'define_class' => false
+    'define_class' => false,
 ];
